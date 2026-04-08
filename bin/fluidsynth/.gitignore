@@ -1,44 +1,44 @@
-.DS_Store
-build/
-install/
+# .DS_Store
+# build/
+# install/
 
-CMakeCache.txt
-CMakeFiles
-Makefile
-cmake_install.cmake
-install_manifest.txt
+# CMakeCache.txt
+# CMakeFiles
+# Makefile
+# cmake_install.cmake
+# install_manifest.txt
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# # Object files
+# *.o
+# *.ko
+# *.obj
+# *.elf
 
-# Precompiled Headers
-*.gch
-*.pch
+# # Precompiled Headers
+# *.gch
+# *.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# # Libraries
+# *.lib
+# *.a
+# *.la
+# *.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# # Shared objects (inc. Windows DLLs)
+# *.dll
+# *.so
+# *.so.*
+# *.dylib
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# # Executables
+# *.exe
+# *.out
+# *.app
+# *.i*86
+# *.x86_64
+# *.hex
 
-# ProjectFiles
-*.pro.user*
-*.user
-*.vscode
+# # ProjectFiles
+# *.pro.user*
+# *.user
+# *.vscode
