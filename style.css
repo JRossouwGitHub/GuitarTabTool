@@ -1,0 +1,132 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1C1D1F;
+    color: #DDDDDD;
+}
+
+#root{
+    width: 100%;
+    height: 100%;
+}
+
+#tab-container{
+    width: 98%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+#tunings{
+    margin-top: 10px;
+    width: max-content;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.string-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.string{
+    width: 100%;
+    height: 1px;
+    background-color: #DDDDDD;
+}
+
+.note{
+    margin: 0 auto;
+    margin-top: -7.5px;
+    width: min-content;
+    height: min-content;
+    text-align: center;
+    background-color: #1C1D1F;
+}
+
+.measure-counter{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.measure-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 2px solid #DDDDDD;
+}
+
+.beat-container{
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.beat{
+    width: 2px;
+    height: 100%;
+    background-color: #DDDDDD;
+}
+
+#controls-container{
+    width: 50%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #DDDDDD;
+    color: #1C1D1F;
+    cursor: pointer;
+}
+
+.secondary{
+    background-color: #DDDDDD;
+    color: #1C1D1F;
+}
+
+.secondary:hover{
+    background-color: #cccccc;
+    color: #1C1D1F;
+}
+
+.primary{
+    background-color: #14941B;
+    color: #FFF;
+}
+
+.primary:hover{
+    background-color: #18b320;
+    color: #FFF;
+}
