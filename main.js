@@ -26,30 +26,9 @@ app.on('ready', () => {
     fluidsynth.instrument("guitar")
     setTimeout(() => {
         ipcMain.on('play', (event, data) => {
-            let tab = 0
-            let measure = 0
-            let beat = 0
-            let done = false
-            setInterval(() => {
-                if(done) return
-                let line = data.tabs[tab][measure][beat].map((n,i) => n !== null ? [data.notes[i], n] : []).filter(n => n.length > 0)
-                line.map((n) => fluidsynth.play(n[0], n[1]))
-                beat++
-                if(beat >= data.tabs[tab][measure].length){
-                    beat = 0
-                    measure++
-                    if(measure >= data.tabs[tab].length){
-                        measure = 0
-                        tab++
-                        if(tab >= data.tabs.length){
-                            tab = 0
-                            done = true
-                        }
-                    }
-                }
-            }, data.timing)
+            fluidsynth.start(data)
         })
-    }, 1000)
+    }, 100)
 })
 
 app.on('window-all-closed', () => {

@@ -1,7 +1,6 @@
 let resetBtn = document.getElementById('resetBTN')
-let setBtn = document.getElementById('setBTN')
 let playBtn = document.getElementById('playBTN')
-
+let play = false
 let measuresPerTab = 2
 let bpm = document.getElementById('bpmIN').value
 let measure = document.getElementById('measuresIN').value
@@ -26,9 +25,14 @@ tabContainer.setAttribute('id', 'tab-container')
 root.appendChild(tabContainer)
 
 resetBtn.addEventListener('click', resetTabs)
-setBtn.addEventListener('click', setTabs)
+document.getElementById('bpmIN').addEventListener('change', setTabs)
+document.getElementById('measuresIN').addEventListener('change', setTabs)
+document.getElementById('beatsIN').addEventListener('change', setTabs)
 playBtn.addEventListener('click', () => {
-    api.play({tabs: [tabs], notes: notes, timing: 60000 / bpm})
+    play = !play
+    api.play({tabs: [tabs], notes: notes, timing: 60000 / bpm, play: play})
+    //needs to be triangle or square
+    playBtn.innerHTML = play ? '►' : '■'
 })
 
 creatTabs()
