@@ -29,6 +29,14 @@ class FluidSynth {
             "A": 45,
             "E": 40
         }
+        this.played = {
+            "e": [],
+            "B": [],
+            "G": [],
+            "D": [],
+            "A": [],
+            "E": []
+        }
         //this.read()
     }
 
@@ -46,7 +54,12 @@ class FluidSynth {
     }
 
     play(note, fret = 0) {
+        if(this.played[note].length > 0){
+            this.stop(this.played[note][0], this.played[note][1])
+            this.played[note] = []
+        }
         this.write(`noteon 0 ${this.notes[note] + fret} 100\n`)
+        this.played[note] = [note, fret]
     }
 
     start(data) {
