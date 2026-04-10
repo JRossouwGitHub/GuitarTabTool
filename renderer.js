@@ -30,7 +30,7 @@ document.getElementById('measuresIN').addEventListener('change', setTabs)
 document.getElementById('beatsIN').addEventListener('change', setTabs)
 playBtn.addEventListener('click', () => {
     play = !play
-    api.play({tabs: [tabs], notes: notes, timing: 60000 / bpm, play: play})
+    api.play({tabs: [tabs], notes: notes, timing: (60000 / (4 / measure)) / bpm, play: play})
     //needs to be triangle or square
     playBtn.innerHTML = play ? '►' : '■'
 })
